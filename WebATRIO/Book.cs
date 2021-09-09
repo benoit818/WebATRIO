@@ -38,6 +38,6 @@ namespace WebATRIO
     {
         [XmlArray("libraries")]
         [XmlArrayItem("library", typeof(Library))]
-        public Library[] Book { get; set; }
+        public Library[] Library { get; set; }
     }
 }
