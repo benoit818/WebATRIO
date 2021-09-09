@@ -46,7 +46,7 @@ namespace WebApplication1.Controllers
         }
 
         [HttpPost("people/Save")]
-        public IActionResult Save(Person person)
+        public IActionResult Save([FromBody]  Person person)
         {
             if (person.Naissance > new DateTime(1871, 3, 1, 7, 0, 0))
             {
