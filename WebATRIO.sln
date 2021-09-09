@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31410.357
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebATRIO", "WebATRIO\WebATRIO.csproj", "{9496D8C5-765B-4883-9E3B-77422A32C977}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication1", "WebApplication1\WebApplication1.csproj", "{E81DF2AE-DFB2-4D17-AAA2-6F7707A39B93}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9496D8C5-765B-4883-9E3B-77422A32C977}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9496D8C5-765B-4883-9E3B-77422A32C977}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9496D8C5-765B-4883-9E3B-77422A32C977}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9496D8C5-765B-4883-9E3B-77422A32C977}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E81DF2AE-DFB2-4D17-AAA2-6F7707A39B93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E81DF2AE-DFB2-4D17-AAA2-6F7707A39B93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E81DF2AE-DFB2-4D17-AAA2-6F7707A39B93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E81DF2AE-DFB2-4D17-AAA2-6F7707A39B93}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E73AAAD7-23E9-46B1-9355-691FCF761DBE}
+	EndGlobalSection
+EndGlobal
