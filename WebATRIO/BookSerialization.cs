@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml;
 using System.Xml.Serialization;
 
 namespace WebATRIO
@@ -27,6 +28,27 @@ namespace WebATRIO
             return books.First(x => x.Title.Contains ("roman"));
 
   
+        }
+
+        public static void XpathMethod()
+        {
+            string fullName = "F:\\Programming\\XML\\Example XML.xml";
+            XmlDocument xreader = new XmlDocument();
+
+            xreader.Load(fullName);
+            XmlNode root = xreader.DocumentElement;
+            XmlNodeList xnList1 =
+                   xreader.SelectNodes("library/Book/");
+
+            XmlNodeList xnList2 =
+                   xreader.SelectNodes(@"library/Book[@type='roman']/");
+
+            XmlNodeList xnList3 =
+                   xreader.SelectNodes(@"library/Book[@type='bd']/");
+
+           int  nbelem = xnList3.Count;
+
+
         }
     }
 }
