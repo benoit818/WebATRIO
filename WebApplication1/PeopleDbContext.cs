@@ -13,14 +13,6 @@ namespace WebApplication1
 
         public DbSet<Person> person { get; set; }
 
-        internal void SaveChanges()
-        {
-            throw new NotImplementedException();
-        }
-
-        internal void Add(Person person)
-        {
-            throw new NotImplementedException();
-        }
+   
     }
 }

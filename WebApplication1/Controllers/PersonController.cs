@@ -6,6 +6,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using WebApplication1.Model;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Http;
+using System.Net;
 
 namespace WebApplication1.Controllers
 {
@@ -20,6 +22,8 @@ namespace WebApplication1.Controllers
             _context = dbContext;
         }
         [HttpGet("people/{id}")]
+        [ProducesResponseType(typeof(Person), (int)HttpStatusCode.OK)]
+        [ProducesResponseType((int)HttpStatusCode.NotFound)]
         public ActionResult<Person> Get(int id)
         {
             var person = _context.person.Find(id);
@@ -29,10 +33,12 @@ namespace WebApplication1.Controllers
                 return NotFound();
             }
 
-            return person;
+            return Ok(person);
         }
         // on peut configurer les routes...
         [HttpGet("people/{id}")]
+        [ProducesResponseType(typeof(Person), (int)HttpStatusCode.OK)]
+        [ProducesResponseType((int)HttpStatusCode.NotFound)]
         public async Task<IActionResult> GetAll()
         {
             var person = await _context.person.OrderBy(x => x).ToListAsync(); ;
@@ -46,6 +52,8 @@ namespace WebApplication1.Controllers
         }
 
         [HttpPost("people/Save")]
+        [ProducesResponseType(StatusCodes.Status201Created)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public IActionResult Save([FromBody]  Person person)
         {
             if (person.Naissance > new DateTime(1871, 3, 1, 7, 0, 0))
