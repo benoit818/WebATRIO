@@ -23,7 +23,7 @@ namespace WebATRIO
             libraries = (Library[])serializer.Deserialize(reader);
             reader.Close();
 
-            List<Book>books =libraries.SelectMany(x => x.Book).ToList();
+            List<Book>books = libraries.SelectMany(x => x.Book).ToList();
 
             return books.First(x => x.Title.Contains ("roman"));
   

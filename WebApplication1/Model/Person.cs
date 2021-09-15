@@ -13,7 +13,7 @@ namespace WebApplication1.Model
         [Required]
         public string Nom { get; set; }
         [Required]
-        public string Prenom{get; set;}
+        public string Prenom { get; set; }
         [Required]
         public DateTime Naissance { get; set; }
 
