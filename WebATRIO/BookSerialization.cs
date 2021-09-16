@@ -9,9 +9,9 @@ using System.Xml.Serialization;
 
 namespace WebATRIO
 {
-    public static class BookSerializer
+    public static class SerializerUtilities
     {
-        public static Book Deserialize()
+        public static Book Deserialize(string file)
         {
             Library[] libraries = null;
             string path = @"‪C:\Users\benoi\source\repos\WebATRIO\WebATRIO\library.xml";
@@ -29,7 +29,7 @@ namespace WebATRIO
   
         }
 
-        public static void XpathMethod()
+        public static void XpathMethod(string file)
         {
             string fullName = "F:\\Programming\\XML\\Example XML.xml";
             XmlDocument xreader = new XmlDocument();
